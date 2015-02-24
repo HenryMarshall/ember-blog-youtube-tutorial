@@ -1,0 +1,12 @@
+<h1>Posts</h1>
+
+<ul class="list-unstyled">
+  {{!-- This iterates over the implicit `this` --}}
+  {{!-- e.g., {{#each this}} --}}
+  {{#each}}
+    <li>
+      {{!-- This in turn refers to an implicit `this.title` --}}
+      {{title}}
+    </li>
+  {{/each}}
+</ul>
