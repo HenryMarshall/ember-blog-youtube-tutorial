@@ -5,9 +5,14 @@ module.exports = function(app) {
   postsRouter.get('/', function(req, res) {
     res.send({
       'posts': [
-        { id: 1, title: "foo" },
-        { id: 2, title: "bar" }
-      ]
+        { id: 1, title: "foo", author: 1 },
+        { id: 2, title: "bar", author: 1 }
+      ],
+      "authors": [{
+        id: 1,
+        name: "Bob",
+        posts: [1,2]
+      }]
     });
   });
 
