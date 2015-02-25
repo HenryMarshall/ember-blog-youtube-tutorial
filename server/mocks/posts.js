@@ -64,9 +64,12 @@ module.exports = function(app) {
 
   postsRouter.get('/:id', function(req, res) {
     res.send({
-      'posts': {
-        id: req.params.id
-      }
+      // `posts` is the var from :26
+      'posts': posts.find(function(post) {
+        // Returns the post where id is the sams as the params.id
+        return post.id == req.params.id
+      }),
+      'authors': authors
     });
   });
 
