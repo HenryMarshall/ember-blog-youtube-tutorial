@@ -23,21 +23,38 @@ if (!Array.prototype.find) {
   };
 }
 
+var posts = 
+      [
+        {
+          id: 1,
+          title: "foo",
+          body: "fooooffoooof",
+          author: 1
+        }, { 
+          id: 2, 
+          title: "bar", 
+          body: "barrabbarrab",
+          author: 1 
+        }
+      ],
+
+    authors = 
+      [
+        {
+          id: 1,
+          name: "Bob",
+          posts: [1,2]
+        }
+      ];
+
 module.exports = function(app) {
   var express = require('express');
   var postsRouter = express.Router();
 
   postsRouter.get('/', function(req, res) {
     res.send({
-      'posts': [
-        { id: 1, title: "foo", author: 1 },
-        { id: 2, title: "bar", author: 1 }
-      ],
-      "authors": [{
-        id: 1,
-        name: "Bob",
-        posts: [1,2]
-      }]
+      'posts': posts,
+      "authors": authors
     });
   });
 
