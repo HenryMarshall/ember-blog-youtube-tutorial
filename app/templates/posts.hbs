@@ -1,15 +1,23 @@
 <h1>Posts</h1>
 
-<ul class="list-unstyled">
-  {{!-- This iterates over the implicit `this` --}}
-  {{!-- e.g., {{#each this}} --}}
-  {{#each}}
-    <li>
-      {{!-- This in turn refers to an implicit `this.title` --}}
-      {{title}}
-      <span class="muted">
-        by {{author.name}}
-      </span>
-    </li>
-  {{/each}}
-</ul>
+<div class="col-xs-4">
+  <ul class="list-unstyled">
+    {{!-- This iterates over the implicit `this` --}}
+    {{!-- e.g., {{#each this}} --}}
+    {{#each}}
+      <li>
+        {{#link-to 'post' this}} 
+          {{!-- This in turn refers to an implicit `this.title` --}}
+          {{title}}
+          <span class="muted">
+            by {{author.name}}
+          </span>
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="col-xs-8">
+  {{outlet}}
+</div>
