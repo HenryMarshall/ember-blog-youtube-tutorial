@@ -28,7 +28,7 @@ var posts =
         {
           id: 1,
           title: "foo",
-          body: "fooooffoooof",
+          body: "fooooffoooof __bold__ _italics_ stuff",
           date: new Date(2014,5,4,6,0,0),
           author: 1
         }, { 
