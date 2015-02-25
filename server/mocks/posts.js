@@ -29,11 +29,13 @@ var posts =
           id: 1,
           title: "foo",
           body: "fooooffoooof",
+          date: new Date(2014,5,4,6,0,0),
           author: 1
         }, { 
           id: 2, 
           title: "bar", 
           body: "barrabbarrab",
+          date: new Date(2014,9,15,8,10,0),
           author: 1 
         }
       ],
