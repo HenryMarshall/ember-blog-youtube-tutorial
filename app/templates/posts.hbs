@@ -5,11 +5,13 @@
   {{!-- e.g., {{#each this}} --}}
   {{#each}}
     <li>
-      {{!-- This in turn refers to an implicit `this.title` --}}
-      {{title}}
-      <span class="muted">
-        by {{author.name}}
-      </span>
+      {{#link-to 'post' this}} 
+        {{!-- This in turn refers to an implicit `this.title` --}}
+        {{title}}
+        <span class="muted">
+          by {{author.name}}
+        </span>
+      {{/link-to}}
     </li>
   {{/each}}
 </ul>
