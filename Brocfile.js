@@ -19,5 +19,6 @@ var app = new EmberApp();
 
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/moment/min/moment.min.js');
+app.import('bower_components/showdown/compressed/Showdown.min.js');
 
 module.exports = app.toTree();
